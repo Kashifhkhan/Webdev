@@ -1,19 +1,33 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-/*-- header --*/
 html,body {
 	font-family: 'Open Sans', sans-serif;
 	background:#FFF;
 	font-size:100%;
 }
+.color-thm {
+	color: #09399f;
+}
 /*-- header --*/
 .header-top{
-	background:#FFF;
-	padding: 1.5em 0;
+	background: 0 0;
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+	padding: 0.5em 0;
+}
+.nav-fixed-top {
+	position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.nav-fixed-top.sticky {
+	-webkit-box-shadow: 0px 0px 2px #777;
+    box-shadow: 0px 0px 2px #777;
+    background-color: #EDF4FA;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+.top-nav {
+	margin-top: 1em;
 }
 .head-left{
 	float:left;
@@ -62,20 +76,21 @@ html,body {
 .top-nav ul li{
 	display:inline-block;
 	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 .top-nav ul li a{
-	color: #FFF;
-	font-size: 23px;
-	padding: 1.3em 2em;
+	color: #000;
+	font-size: 14px;	
 	display: block;
+	padding: 0.5em;
 	text-decoration: none;
 }
 .top-nav ul li a.active{
-	background:#34BBB1;
+	color: #09399f;
 }
 .top-nav ul li a:hover{
-	background:#34BBB1;
-	color:#FFF;
+	color: #09399f;
 	transition:.5s all;
 	-webkit-transition:.5s all;
 	-moz-transition:.5s all;
@@ -84,17 +99,23 @@ html,body {
 }
 /*-- banner --*/
 .banner{
-	background:url(../images/1.jpg) no-repeat 0px 0px;
-	min-height:496px;
+	background:url(../images/banner-1.jpg) no-repeat 0px 0px;
+	min-height:100vh;
 	position: relative;	
 	background-size: cover;
 }
+.banner-2 {
+	background:url(../images/banner-5.jpeg) no-repeat 0px 0px;
+}
+.banner-3 {
+	background:url(../images/banner-6.jpeg) no-repeat 0px 0px;
+}
 .banner-info{
-	background: rgba(59, 167, 159, 0.86);
+	background: rgba(13,83,231, 0.76);
 	padding: 4em 0;
 	width: 43%;
 	position:absolute;
-	margin-top: 10em;
+	margin-top: 15%;
 }
 .banner-info h1{
 	color: #FFF;
@@ -350,7 +371,7 @@ ul.social-slide li i.mac{
 }
 .callbacks_here a:after{
 	border: 2px solid #FFFFFF;
-	background: #3BA79F;
+	background: #09399f;
 }
 /*-- Slider part Ends Here --*/
 /*-- banner-bottom --*/
@@ -435,10 +456,10 @@ ul.social-slide li i.mac{
 	line-height: 2em;
 }
 .botton a{
-	border: 1px solid #00FFD2;
+	border: 1px solid #09399f;
 	font-family: inherit;
 	font-size: 16px;
-	color: #00FFD2;
+	color: #09399f;
 	cursor: pointer;
 	padding: .8em 2em;
 	display: inline-block;
@@ -767,7 +788,7 @@ ul.callbacks_tabs.callbacks2_tabs a:after {
 	color: #898888;
 }
 .contact-grid-left p a:hover{
-	color: #34BBB1;
+	color: #09399f;
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-ms-transition:0.5s all;
@@ -819,7 +840,7 @@ form input[type="submit"]{
 	-webkit-appearance: none;
 }
 form input[type="submit"]:hover{
-	color:#34BBB1;
+	color:#09399f;
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-ms-transition:0.5s all;
@@ -828,7 +849,7 @@ form input[type="submit"]:hover{
 }
 /*-- footer --*/
 .footer{
-	background:#34BBB1;
+	background:#f7f7f7;
 	padding: 2em 0;
 }
 .footer p{
@@ -915,10 +936,6 @@ span.menu {
 	.location p {
 		font-size: 16px;
 	}
-	.top-nav ul li a {
-		font-size: 18px;
-		padding: 1.3em 2.4em;
-	}
 	.banner-info {
 		width: 51%;
 	}
@@ -947,8 +964,8 @@ span.menu {
 	.top-nav ul.nav1 li {
 		display: block;
 		text-align: center;
-		background: #34BBB1;
-		border-bottom: 1px dashed #2E9B8A;
+		background: #fff;
+		border-bottom: 1px dashed #666;
 		margin: 0;
 		float: none;
 	}
@@ -1089,10 +1106,6 @@ span.menu {
 	.head-right {
 		width: 52%;
 	}
-	.top-nav ul li a {
-		padding: 1em 2.4em;
-		font-size: 16px;
-	}
 	.phone p {
 		margin: 0 0 0 2.5em;
 	}
@@ -1149,8 +1162,7 @@ span.menu {
 		margin-top: 0;
 	}
 	.head-right {
-		margin:0;
-		width: 22%;
+		margin:0;		
 	}
 	.phone {
 		cursor: pointer;
@@ -1471,5 +1483,24 @@ span.menu {
 	}
 	.footer p {
 		font-size: 14px;
+	}
+}
+/*=====custome style==================*/
+.social ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: right;
+}
+.social ul li {
+	display: inline;
+	margin: 0 5px;
+}
+@media screen and (max-width:768px){
+	.top-nav {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
 	}
 }

@@ -1,15 +1,10 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Home-land Bootstarp Website Template | Home :: w3layouts</title>
+		<title>Home | thewebdevloper.com</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+		<link rel="shortcut icon" href="images/favicon.png">
 		<!-- web-font -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<!-- web-font -->
@@ -26,7 +21,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
 					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+					$('html,body').animate({scrollTop:$(this.hash).offset().top - 80},1000);
+				});
+				$(window).scroll(function(){
+				var sticky = $('.header-top'),
+					scroll = $(window).scrollTop();
+
+				if (scroll >= 100) sticky.addClass('sticky');
+				else sticky.removeClass('sticky');
 				});
 			});
 		</script>
@@ -34,23 +36,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</head>
 	<body>
 		<!-- header -->
-		<div id="home" class="header-top">
+		<div class="header-top nav-fixed-top">
 			<!-- container -->
 			<div class="container">
 				<div class="head-left">
-					<a href="#"><img src="images/logo.png" alt="" /></a>
+					<a href="#"><img src="images/thewebdevloper.com-logo.png" width="180" alt="" /></a>
 				</div>
-				<div class="head-right">
-					<div class="phone">
-						<p>Phone:
-							<span>+1 234 567 9871</span>
-						</p>
-					</div>
-					<div class="location">
-						<p>Location:
-							<span>756 CD-Road</span>
-							Brezil,M07 435.
-						</p>
+				<div class="head-right">					
+					<div class="top-nav">
+						<span class="menu">Menu</span>
+						<ul class="nav1">
+							<li><a href="#home" class="scroll">HOME</a></li>
+							<li><a href="#about" class="scroll active">ABOUT</a></li>
+							<li><a href="#services" class="scroll">SERVICES</a></li>
+							<li><a href="#galary" class="scroll">GALLERY</a></li>
+							<li><a href="#blog" class="scroll">BLOG</a></li>
+							<li><a href="#contact" class="scroll">CONTACTUS</a></li>
+						</ul>
+						<!-- script-for-menu -->
+								<script>
+								$( "span.menu" ).click(function() {
+									$( "ul.nav1" ).slideToggle( 300, function() {
+									// Animation complete.
+									});
+									});
+								</script>
+							<!-- /script-for-menu -->
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -58,36 +69,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<!-- //container -->
 		</div>
-		<div class="header-bottom">
-			<!-- container -->
-			<div class="container">
-				<div class="top-nav">
-					<span class="menu">Menu</span>
-					<ul class="nav1">
-						<li><a href="#home" class="scroll">HOME</a></li>
-						<li><a href="#about" class="scroll active">ABOUT</a></li>
-						<li><a href="#services" class="scroll">SERVICES</a></li>
-						<li><a href="#galary" class="scroll">GALLERY</a></li>
-						<li><a href="#blog" class="scroll">BLOG</a></li>
-						<li><a href="#contact" class="scroll">CONTACTUS</a></li>
-					</ul>
-					<!-- script-for-menu -->
-							 <script>
-							   $( "span.menu" ).click(function() {
-								 $( "ul.nav1" ).slideToggle( 300, function() {
-								 // Animation complete.
-								  });
-								 });
-							</script>
-						<!-- /script-for-menu -->
-				</div>
-			</div>
-			<!-- //container -->
-		</div>
+		
 		<!-- //header -->
 		<!-- banner -->
-			<!--- banner Slider starts Here --->
-	  			<script src="js/responsiveslides.min.js"></script>
+			<!--- banner Slider starts Here ---><!-->
+			<script src="js/responsiveslides.min.js"></script>
 			 <script>
 			    // You can also use "$(window).load(function() {"
 			    $(function () {
@@ -108,14 +94,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			    });
 			  </script>
-			<!----//End-slider-script---->
-					  <div  id="top" class="callbacks_container">
+		
+					  <div  class="callbacks_container" id="home">
 						<ul class="rslides" id="slider4">
 							<li>
 							<div class="banner">
 								<div class="banner-info">
-									<h1>slightly believable</h1>
-									<p>It is a long established fact  
+									<h1>We Are Incredible Digital Marketing Agency</h1>
+										<p>It is a long established fact  
 										<span>will be distracted by the readable</span>
 										a page when looking at its layout.
 									</p>
@@ -123,7 +109,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 							</li>
 							<li>
-							<div class="banner">
+							<div class="banner banner-2">
 								<div class="banner-info">
 									<h1>generator on the Internet</h1>
 									<p>Combined with a handful  
@@ -134,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 							</li>
 							<li>
-							<div class="banner">
+							<div class="banner banner-3">
 								<div class="banner-info">
 									<h1>In pharetra dui vitae odio</h1>
 									<p>Maecenas venenatis arcu tellus 
@@ -154,7 +140,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="banner-bottom">
 			<!-- container -->
 			<div class="container">
-				<h3>properties for feature</h3>
+				<h3>We Build Website, App & Software</h3>
 				<div class="bottom-grids">
 					<div class="col-md-4 bottom-grid bottom-grid-left">
 						<div class="lock"> </div>
@@ -596,7 +582,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="footer">
 			<!-- container -->
 			<div class="container">
-				<p>Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				<div class="pull-left">
+					Copy right &copy; thewebdevloper.com
+				</div>
+				<div class="social pull-right">
+					<ul>
+						<li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+						<li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+						<li><a href="#"><img src="images/linkedin.png" alt=""></a></li>
+						<li><a href="#"><img src="images/google-plus.png" alt=""></a></li>
+						<li><a href="#"><img src="images/youtube.png" alt=""></a></li>
+					</ul>
+					
+				</div>
 			</div>
 			<!-- //container -->
 		</div>
