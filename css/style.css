@@ -103,6 +103,7 @@ html,body {
 	min-height:100vh;
 	position: relative;	
 	background-size: cover;
+	background-attachment: fixed;
 }
 .banner-2 {
 	background:url(../images/banner-5.jpeg) no-repeat 0px 0px;
@@ -232,8 +233,7 @@ html,body {
 	overflow: hidden;
 	text-decoration: none;
 	height: 61px;
-	width: 55px;
-	background: transparent url("../images/themes.png") no-repeat left top;
+	width: 55px;	
 	margin-top: -65px;
 }
 .callbacks_nav:active {
@@ -376,7 +376,7 @@ ul.social-slide li i.mac{
 /*-- Slider part Ends Here --*/
 /*-- banner-bottom --*/
 .banner-bottom h3{
-	font-size: 30px;
+	font-size: 24px;
 	text-align: center;
 	text-transform: uppercase;
 	color: #414141;
@@ -414,17 +414,17 @@ ul.social-slide li i.mac{
 	margin: 0 auto;
 }
 .bottom-grid h4{
-	font-size:26px;
+	font-size:18px;
 	color:#414141;
 	font-weight: 700;
 	margin: 1em 0;
 	text-transform:uppercase;
 }
 .bottom-grid p{
-	font-size: 16px;
+	font-size: 14px;
 	color: #898888;
 	margin:0;
-	line-height: 1.8em;
+	line-height: 26px
 }
 .bottom-grid p span{
 	display:block;
@@ -1516,13 +1516,13 @@ span.menu {
 	width: 40px;
 	height: 64px;
 }
-.sprite-seo:hover {
+.bottom-grid:hover > .sprite-seo {
 	background-position: -1186px -90px;
 }
-.sprite-mobile:hover {
+.bottom-grid:hover > .sprite-mobile {
 	background-position: -946px -90px;
 }
-.sprite-web:hover {
+.bottom-grid:hover > .sprite-web {
 	background-position: -1102px -93px;
 }
 @media screen and (max-width:768px){
