@@ -1496,6 +1496,35 @@ span.menu {
 	display: inline;
 	margin: 0 5px;
 }
+.sprite {
+	background-image: url('../images/sprite.png');
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+.sprite-seo {
+	background-position: -1186px -10px;
+	width: 64px;
+	height: 64px;
+}
+.sprite-web {
+	background-position: -1102px -13px;
+	width: 64px;
+	height: 58px;
+}
+.sprite-mobile {
+	background-position: -946px -10px;
+	width: 40px;
+	height: 64px;
+}
+.sprite-seo:hover {
+	background-position: -1186px -90px;
+}
+.sprite-mobile:hover {
+	background-position: -946px -90px;
+}
+.sprite-web:hover {
+	background-position: -1102px -93px;
+}
 @media screen and (max-width:768px){
 	.top-nav {
 		position: absolute;
